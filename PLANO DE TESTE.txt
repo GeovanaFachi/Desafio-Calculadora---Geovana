@@ -1,0 +1,40 @@
+1- OBJETIVO DO TESTE
+Garantir que a calculadora execute corretamente as operações matemáticas básicas(soma, subtração, multiplicação e divisão).
+
+2- METODOLOGIA DE TESTE
+Adotando uma abordagem baseada em boas praticas do ISTQB, os tentes serão organizados em testes manuais e possíveis automação. 
+
+3- ESCOPO E TESTE
+Testar a funcionalidade das funções soma(), subtrair(), multiplicar(), dividir() e os valores dos campos 'num1' e 'num2' e validar o 'resultado'. Excluindo o backend.
+
+4- TIPOS DE TESTE APLICADOS
+- Testas funcionalidade: se os cálculos estão corretos
+- Teste de validação: se possui campos vazios, entradas inválidas e tipos incorretos.
+- Teste de interface: atualização do resultado e comportamento dos botões.
+
+5- FORMA DE EXECUCÃO
+- Testes manuais: execução direta
+- Testes automatizados: códigos em Java script que resulte um valor específico.
+
+6- AMBIENTE DE TESTE
+- Navegadores
+- VSCode
+
+7- PAPEIS E RESPONSABILIDADES
+- QA Criar e executar testes
+- Dev corrigir defeitos
+-QA/Dev Validar correções
+
+8- RISCOS E CONTIGENCIAS
+Se erros, para não atrasar focar no mais importante.
+
+9- FERRAMENTAS DE TESTE
+Cypress e Selenium
+
+10- METRICAS DE QUALIDADE
+- Quantidade de sucesso dos testes
+- Numero de erros encontrados
+
+
+
+
