@@ -22,7 +22,51 @@
             const valor = parseInt(document.getElementById("num1").value) / parseInt(document.getElementById("num2").value);
             document.getElementById("resultado").innerHTML =
                 "Divisao igual a: " + valor;
-        }         
+        } 
+        function testeSoma() {
+            const num1 = 7;
+            const num2 = 3;
+
+            const valor = num1 + num2;
+            if (valor !== 10) {
+            document.getElementById("teste").innerHTML = "Esperado 10"; 
+            } else {
+            document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 10";    
+            }
+        }
+        function testeSubtracao() {
+            const num1 = 8;
+            const num2 = 3;
+
+            const valor = num1 - num2;
+            if (valor !== 5) {
+            document.getElementById("teste").innerHTML = "Esperado 5"; 
+            } else {
+            document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 5";    
+            }
+        }
+        function testeMultiplicar() {
+            const num1 = 8;
+            const num2 = 3;
+
+            const valor = num1 * num2;
+            if (valor !== 24) {
+            document.getElementById("teste").innerHTML = "Esperado 24"; 
+            } else {
+            document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 24";    
+            }
+        }
+        function testeDividir() {
+            const num1 = 6;
+            const num2 = 3;
+
+            const valor = num1 / num2;
+            if (valor !== 2) {
+            document.getElementById("teste").innerHTML = "Esperado 2"; 
+            } else {
+            document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 2";    
+            }
+        }        
     </script>
 </head>
 
@@ -31,10 +75,12 @@
     <input id="num2" type="number" placeholder="Numero 2">
 
     <button id="1Botao" onclick="somar()">Somar</button> <button id="2Botao" onclick="subtrair()">Subtrair</button>
-    <button id="3Botao" onclick="multiplicar()">Multiplicar</button> <button id="3Botao"
-        onclick="dividir()">Dividir</button>
+    <button id="3Botao" onclick="multiplicar()">Multiplicar</button> <button id="4Botao" onclick="dividir()">Dividir</button>
+    <button id="5Botao" onclick="testeSoma()">Teste Soma</button><button id="6Botao" onclick="testeSubtracao()">Teste Substracao</button>
+    <button id="7Botao" onclick="testeMultiplicar()">Teste Multiplicacao</button><button id="8Botao" onclick="testeDividir()">Teste Divisao</button>
 
-    <div1 id="resultado">O resultado aparecerá aqui</div1>
+    <h1 id="resultado">O resultado aparecerá aqui</h1>
+    <h2 id="teste">Esperando teste</h2>
 
 </body>
 
