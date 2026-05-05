@@ -3,6 +3,7 @@
 <head>
     <title>Calculadora</title>
     <script>
+        //CANCULADORA 
         function somar() {
             const valor = parseInt(document.getElementById("num1").value) + parseInt(document.getElementById("num2").value);
             document.getElementById("resultado").innerHTML =
@@ -23,6 +24,7 @@
             document.getElementById("resultado").innerHTML =
                 "Divisao igual a: " + valor;
         } 
+        //TESTE MANUAL DA CALCULADORA, VALIDANDO AS FUNÇÕES
         function testeSoma() {
             const num1 = 7;
             const num2 = 3;
@@ -66,7 +68,25 @@
             } else {
             document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 2";    
             }
-        }        
+        }
+        // TENTE DO COMPONENTE INPUT2
+        function input2() {
+            const meuinput = document.getElementById('num2');
+            if (meuinput) {
+                document.getElementById('resultado').innerHTML = "O input existe.";
+            } else {
+               document.getElementById('resultado').innerHTML = "O input não existe.";  
+            };
+        }
+        // TENTE DO COMPONENTE BOTAO SOMAR
+        function botaosomar() {
+            const botao = document.getElementById('1Botao');
+            if (botao) {
+                document.getElementById('resultado').innerHTML = "O botao existe.";
+            } else {
+               document.getElementById('resultado').innerHTML = "O botao não existe."; 
+            }
+        }
     </script>
 </head>
 
@@ -78,6 +98,7 @@
     <button id="3Botao" onclick="multiplicar()">Multiplicar</button> <button id="4Botao" onclick="dividir()">Dividir</button>
     <button id="5Botao" onclick="testeSoma()">Teste Soma</button><button id="6Botao" onclick="testeSubtracao()">Teste Substracao</button>
     <button id="7Botao" onclick="testeMultiplicar()">Teste Multiplicacao</button><button id="8Botao" onclick="testeDividir()">Teste Divisao</button>
+    <button id="9Botao" onclick="input2()">Teste Input</button><button id="10Botao" onclick="botaosomar()">Teste Botao</button>
 
     <h1 id="resultado">O resultado aparecerá aqui</h1>
     <h2 id="teste">Esperando teste</h2>
