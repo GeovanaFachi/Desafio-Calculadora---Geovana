@@ -53,7 +53,18 @@
             margin: 5px;
             border: none;
             border-radius: 8px;
-            background-color: #007bff;
+            background-color: #14385e;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .zeramento button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background-color: #b30c0c;
             color: white;
             cursor: pointer;
             font-size: 14px;
@@ -61,7 +72,7 @@
 
         .operacoes button:hover,
         .testes button:hover {
-            background-color: #0056b3;
+            background-color: #14385e;
         }
 
         .resultado {
@@ -98,22 +109,56 @@
 
         function somar() {
             const valor = parseFloat(document.getElementById("num1").value) + parseFloat(document.getElementById("num2").value);
-            document.getElementById("resultado").innerHTML = "Soma igual a: " + valor;
+            document.getElementById("resultado").innerHTML = valor.toFixed(2);
         }
 
         function subtrair() {
             const valor = parseFloat(document.getElementById("num1").value) - parseFloat(document.getElementById("num2").value);
-            document.getElementById("resultado").innerHTML = "Subtração igual a: " + valor;
+            document.getElementById("resultado").innerHTML = valor.toFixed(2);
         }
 
         function multiplicar() {
             const valor = parseFloat(document.getElementById("num1").value) * parseFloat(document.getElementById("num2").value);
-            document.getElementById("resultado").innerHTML =  "Multiplicação igual a: " + valor;
+            document.getElementById("resultado").innerHTML = valor.toFixed(2);
         }
 
         function dividir() {
             const valor = parseFloat(document.getElementById("num1").value) / parseFloat(document.getElementById("num2").value);
-            document.getElementById("resultado").innerHTML = "Divisão igual a: " + valor;
+            document.getElementById("resultado").innerHTML = valor.toFixed(2);
+        }
+
+        function porcentagem() {
+            const valor = parseFloat(document.getElementById("num1").value) * (parseFloat(document.getElementById("num2").value)/100);
+            document.getElementById("resultado").innerHTML = valor.toFixed(2) + "%";
+        }
+
+        function limpar() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("resultado").innerHTML = "O resultado aparecerá aqui";
+            document.getElementById("teste").innerHTML = "Resultado dos testes aparecerá aqui";
+            document.getElementById("resuteste1").innerHTML = "";
+            document.getElementById("resuteste2").innerHTML = "";
+            document.getElementById("resuteste3").innerHTML = "";
+            document.getElementById("resuteste4").innerHTML = "";
+            document.getElementById("resuteste5").innerHTML = "";
+            document.getElementById("resuteste6").innerHTML = "";
+            document.getElementById("resuteste7").innerHTML = "";
+            document.getElementById("resuteste8").innerHTML = "";
+            document.getElementById("resuteste9").innerHTML = "";
+            document.getElementById("resuteste10").innerHTML = "";
+
+            document.getElementById('resuteste1').classList.add('oculto');
+            document.getElementById('resuteste2').classList.add('oculto');
+            document.getElementById('resuteste3').classList.add('oculto');
+            document.getElementById('resuteste4').classList.add('oculto');
+            document.getElementById('resuteste5').classList.add('oculto');
+            document.getElementById('resuteste6').classList.add('oculto');
+            document.getElementById('resuteste7').classList.add('oculto');
+            document.getElementById('resuteste8').classList.add('oculto');
+            document.getElementById('resuteste9').classList.add('oculto');
+            document.getElementById('resuteste10').classList.add('oculto');
+
         }
 
         // TESTES
@@ -163,6 +208,18 @@
                 document.getElementById("teste").innerHTML = "Esperado valor 2";
             } else {
                 document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 2";
+            }
+        }
+
+        function testePorcentagem() {
+            const num1 = 60;
+            const num2 = 10;
+            const valor = num1 * (num2/100);
+
+            if (valor !== 6) {
+                document.getElementById("teste").innerHTML = "Esperado valor 6";
+            } else {
+                document.getElementById("teste").innerHTML = "Valor exatamente com o esperado, 6";
             }
         }
 
@@ -268,7 +325,7 @@
 
         <div class="inputs">
             <input id="num1" type="number" placeholder="Número 1">
-            <input id="num2" type="number" placeholder="Número 2">
+            <input id="num2" type="number" placeholder="Número 2 ou %">
         </div>
 
         <div class="operacoes">
@@ -276,9 +333,15 @@
             <button id="subtrair" onclick="subtrair()">Subtrair</button>
             <button id="multiplicar" onclick="multiplicar()">Multiplicar</button>
             <button id="dividir" onclick="dividir()">Dividir</button>
+            <button id="porcentagem" onclick="porcentagem()">Porcentagem</button>
+        </div>
+
+        <div class="zeramento">
+            <button id="limpar" onclick="limpar()">Limpar</button>
         </div>
 
         <div class="resultado" id="resultado"> O resultado aparecerá aqui</div>
+
 
         <h2 class="titulo-testes">Área de Testes</h2>
 
@@ -288,7 +351,9 @@
             <button id="testesubtrair" onclick="testeSubtracao()">Teste Subtração</button>
             <button id="testemultiplicar" onclick="testeMultiplicar()">Teste Multiplicação</button>
             <button id="testedividir" onclick="testeDividir()">Teste Divisão</button>
+            <button id="testeporcentagem" onclick="testePorcentagem()">Teste Porcentagem</button>
             <button id="testecomponente" onclick="testecomp()">Teste Componentes</button>
+            
 
         </div>
 

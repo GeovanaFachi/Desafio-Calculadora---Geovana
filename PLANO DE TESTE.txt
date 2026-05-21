@@ -1,11 +1,11 @@
 1- OBJETIVO DO TESTE
-Garantir que a calculadora execute corretamente as operações matemáticas básicas(soma, subtração, multiplicação e divisão).
+Garantir que a calculadora execute corretamente as operações matemáticas básicas(soma, subtração, multiplicação, divisão e porcentagem).
 
 2- METODOLOGIA DE TESTE
 Adotando uma abordagem baseada em boas praticas do ISTQB, os tentes serão organizados em testes manuais e possíveis automação. 
 
 3- ESCOPO E TESTE
-Testar a funcionalidade das funções soma(), subtrair(), multiplicar(), dividir() e os valores dos campos 'num1' e 'num2' e validar o 'resultado'. Excluindo o backend.
+Testar a funcionalidade das funções soma(), subtrair(), multiplicar(), dividir(), porcentagem() e os valores dos campos 'num1' e 'num2' e validar o 'resultado'. Excluindo o backend.
 
 4- TIPOS DE TESTE APLICADOS
 - Testas funcionalidade: se os cálculos estão corretos
